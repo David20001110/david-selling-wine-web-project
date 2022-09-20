@@ -1,0 +1,434 @@
+@charset "UTF-8"; /*國際萬用編碼 一定要放第一行*/
+@import url(reset.css);
+@import url(lightbox.css);
+/* @font-face {
+    font-family: 'Libre Bodoni', serif;
+    src: url(../webfonts/LibreBodoni-Regular.ttf)
+} */
+body{
+    background-color: rgb(26, 0, 0);
+}
+/* SKY AREA */
+.top{
+    display: flex;/* 水平 */
+    align-items: center; /* 置中: 孫子撐兒子的高度 */
+    height: 80px;
+    width: 100%;;
+	background-color:rgba(17, 1, 0, 0.5);
+	position: fixed;/* 固定在天花板 */
+    top: 0; /* 固定在天花板 */
+    z-index: 1;
+}
+/* SKY AREA-LOGO */
+.top a{
+    display: flex;/* 水平 */
+    flex: 1;
+}
+.top a img{
+    max-height: 80px;
+    margin-left: 40px;
+}
+/* SKY AREA-ICONS */
+.top nav ul{
+    display: flex; /* 讓子元素水平排列 */
+    list-style: none; /* 把ul預設的點點拿掉 */
+    /* padding-right: 15px; */
+}
+.icon li{
+    display: block;/*  改變為區塊才能設定寬高 */
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+	/* float: right; */
+    margin: 0px 20px;
+    list-style:none;
+}
+.icon_VIP{
+    background-image: url(../images/icon/VIPicon-hover.png); /* svg圖檔會自動與區塊同寬 */
+    background-size: 100%; /* 非svg圖檔則須設定100% */
+}
+.icon_service{
+    background-image: url(../images/icon/service-icon-hover.png);
+    background-size: 100%;
+}
+.icon_location{
+    background-image: url(../images/icon/location-icon-hover.png);
+    background-size: 100%;
+}
+.icon_shopping{
+    background-image: url(../images/icon/shopping-icon-hover.png);
+    background-size: 100%;
+}
+.icon_VIP:hover{
+    background-image: url(../images/icon/VIPicon.png);
+    background-size: 100%;
+}
+.icon_service:hover{
+    background-image: url(../images/icon/service-icon.png);
+    background-size: 100%;
+}
+.icon_location:hover{
+    background-image: url(../images/icon/location-icon.png);
+    background-size: 100%;
+}
+.icon_shopping:hover{
+    background-image: url(../images/icon/shopping-icon.png);
+    background-size: 100%;
+}
+/* SKY AREA HAMBURGER MENU */
+#menuToggle{
+  display: block;
+  position: relative;
+  top: 10px;
+  right: 35px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#menuToggle a{
+  text-decoration: none;
+  color: #920d0d;
+  transition: color 0.3s ease;
+}
+#menuToggle a:hover{
+  color: rgb(255, 0, 0);
+}
+#menuToggle input{
+  display: block;
+  width: 90px;
+  height: 80px;
+  position: absolute;
+  top: -30px;
+  right: -35px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+/* Just a quick hamburger*/
+#menuToggle span{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 3;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2){
+  transform-origin: 0% 100%;
+}
+
+/* Transform all the slices of hamburger into a crossmark.*/
+#menuToggle input:checked ~ span{
+  opacity: 1;
+  transform: rotate(45deg) translate(2px, 1px);
+  background: #920d0d;
+}
+
+/*But let's hide the middle one.*/
+#menuToggle input:checked ~ span:nth-last-child(3){
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, -0.2);
+}
+
+/* Ohyeah and the last one should go the other direction*/
+#menuToggle input:checked ~ span:nth-last-child(2){
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/* * Make this absolute positioned at the top left of the screen*/
+#menu-list{
+  position: absolute;
+  flex-direction:column;
+  width: 420px;
+  height: 100vh;
+  margin: -60px -350px;
+  z-index: 1;
+  background: #000000;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 100% 0%;
+  transform: translate(0%, -100%);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu-list a{
+    display: flex;
+    height: 10%;
+    padding-right: 70px;
+    margin: auto;
+}
+#menu-list a li{
+    font-size: 2.8rem;
+  }
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul{
+  transform: none;
+}
+  
+
+
+/* BANNER AREA*/
+/* Carousel CSS*/
+.carousel{
+    height: calc(70vh - 80px);
+    z-index: 0;
+}
+.carousel-inner, .carousel-item{
+    /* height:100vh; */
+    margin: 40px 0;
+}
+.carousel-inner{/* 設置滿版 */
+    height: 100%;
+    object-fit: cover;
+}
+.carousel-caption{
+    top: 200px;
+}
+.carousel-caption h5{
+    font-size: 5rem;
+}
+.carousel-caption p{
+    font-size: 1.5rem;
+}
+
+
+/*PRODUCT AREA  */
+#product figure{
+    padding: 50px 20px;
+}
+section{
+    display: flex;
+    /* flex-direction: column; 主籌垂直 */
+    align-items: flex-start; /* 副軸水平 */
+}
+
+.price_list{
+    display: flex; /* 水平排列 */
+    flex-direction: column;
+    /* align-self: flex-start; */
+    width: 500px; /* 左邊篩選單寬度*/
+}
+.price_list>nav{
+    /* margin-left: 20%; */
+    margin: 30px auto;
+    width: 50%;
+    height: 75vh;
+    text-align: center;
+    border-radius: 15pt;
+}
+
+.price_list h3{
+    display: inline-block;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+    background-color: white;
+    border-radius: 30px;
+}
+.price_list li{
+    margin: 20px 5px;
+    padding: 10px;
+    border: solid 2.1px #fff;
+     /* box-shadow: 0px 2px 0px rgb(255, 255, 255); */
+     border-radius: 30px;
+}
+.price1 a {
+    color: white;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+.price1 :hover {
+    color: #920d0d;
+    border-color: #920d0d;
+}
+/* 商品選單卡片 */
+.box_list{
+    display: flex; /* 水平排列 */
+    max-width: 69%; /* 寬度占版面60% */
+    flex-wrap: wrap; /* 換行 */
+}
+.box_list>div{
+    position: relative;
+    width: 300px;
+    height: 500px;
+    margin: 0 20px 40px;
+    padding: 10px 0 0;
+    box-shadow: 1px 1px 10px #ddd; /* x軸 y軸 距離 顏色 */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
+    position: relative;
+    background-position: 50% 15%; /* 將照片設在中間然後靠上15% */
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+}
+.box_list h3, h4, h5{
+    text-align:center;
+}
+.box_list h3{
+    font-size:1.7rem;
+    margin: 285px auto auto; 
+}
+.box_list h4{
+    font-size:1rem;
+    margin: 5px;
+}
+.box_list h5{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 20px;
+}
+.order{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 40px;
+    padding:20px;
+}
+.order_1{
+    align-self: center;
+    width: 100%;
+}
+.addtext{
+    width: 60px;
+    height: 33px;
+    font-weight:bold;
+    border-radius: 5px;
+    margin: 0 5px;
+    text-align: center;
+    line-height: 1.5;
+}
+.decounter, .incounter{
+    width: 33px;
+    height: 33px;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    outline: none;
+    border-width: 0px;
+    border-radius: 5px;
+}
+.add_shop{
+    /* width: 110px; */
+    height:35px;
+    border-radius: 5px;
+    padding-bottom: 1px;
+    font-size: 1rem;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.add_shop:hover{
+    color: rgb(0, 0, 0);
+    background-color:transparent;
+    border-width: 3px;
+    font-size: 1rem;
+}
+.item1{
+    background-image: url(../images/spirts/Tanqueray\ Gin.jpg);
+    /* background-size: cover; */
+    background-size:52px 210px;
+    
+}
+.item2{
+    background-image: url(../images/spirts/Chivas\ Regal\ 12YO\ Scotch\ Whisky.jpg);
+    /* background-size: cover; */
+    background-size:52px 210px;
+}
+.item3{
+    background-image: url(../images/spirts/Finlandia\ Vodka.jpg);
+    /* background-size: cover; */
+    background-size:52px 210px;
+}
+.item4{
+    background-image: url(../images/spirts/Jack\ Daniels\ Tennessee\ Whiskey\ 1\ Litre.jpg);
+    /* background-size: cover; */
+    background-size:52px 210px;
+}
+.item5{
+    background-image: url(../images/spirts/Johnnie\ Walker\ Red\ Label\ 1\ Litre\ Scotch\ Whisky.jpg);
+    /* background-size: cover; */
+    background-size:52px 210px;
+}
+.item6{
+    background-image: url(../images/spirts/Smirnoff\ Red\ Vodka.jpg);
+    /* background-size: cover; */
+    background-size: 52px 210px;
+}
+
+.policy{
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    line-height: 20px;
+    font-size: 0.7em;
+    text-align: center;
+    height: 200px;
+}
+
+/* FOOTER AREA */
+/* warning */
+.warning{
+    background-color: #110100;
+    position: fixed;
+    left: 10;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.warningimg{
+max-height: 22pt;
+/* padding: 0 35%; */
+}
+ .toTop{
+		display: block;
+		width: 50px;
+		height: 50px;
+		background-color: #920d0d;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		right: 40px;
+		bottom: 40px;
+		text-decoration: none;
+		letter-spacing: 0;
+		border-radius: 50%;
+		font-size: 1.5em;
+		transition: .3s;
+}
+
+.toTop .fa{
+	transition: .3s;
+}
+
+.toTop:hover{
+	background-color: rgb(255, 0, 0);
+}
+
+.toTop:hover .fa{
+	transform: translateY(-5px);
+}

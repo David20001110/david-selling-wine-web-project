@@ -1,0 +1,299 @@
+@charset "UTF-8"; /* 國際萬用編碼，一定要放第一行 */
+@import url(reset.css);
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(26, 0, 0);
+    color: rgb(255, 255, 255);
+}
+img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 26%;/* 寬度去符合裝圖片的容器尺寸 */
+}
+
+
+/* topbar (header) */
+#topbar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav {
+    display: flex;
+    flex-direction: row; /* 主軸垂直排列 */
+    align-items: flex-start; /* 副軸垂直排列 */
+}
+nav ul{
+    list-style: none; /* 把ul預設的點點拿掉 */
+}
+.icon{
+    display: flex; /* 讓子元素水平排列 */
+    margin-left: auto;
+    margin-right: auto;
+}
+.icon li{
+    display: block; /* 改變為區塊才能設定寬高 */
+    width: 35px;
+    height: 35px;
+    margin: 0 15px; /* 上下 左右 */
+}
+.icon_VIP{
+    background-image: url(../images/icon/VIPicon.png); /* svg圖檔會自動與區塊同寬 */
+    background-size: 100%; /* 非svg圖檔則須設定100% */
+}
+.icon_service{
+    background-image: url(../images/icon/service-icon.png);
+    background-size: 100%;
+}
+.icon_location{
+    background-image: url(../images/icon/location-icon.png);
+    background-size: 100%;
+}
+.icon_shopping{
+    background-image: url(../images/icon/shopping-icon.png);
+    background-size: 100%;
+}
+.icon_VIP:hover{
+    background-image: url(../images/icon/VIPicon-hover.png);
+    background-size: 100%;
+}
+.icon_service:hover{
+    background-image: url(../images/icon/service-icon-hover.png);
+    background-size: 100%;
+}
+.icon_location:hover{
+    background-image: url(../images/icon/location-icon-hover.png);
+    background-size: 100%;
+}
+.icon_shopping:hover{
+    background-image: url(../images/icon/shopping-icon-hover.png);
+    background-size: 100%;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    padding: 5px 15px; /* 按鈕之間的間距 */
+    border: 1px solid transparent; /* border being transparent so it will not move the hover */
+}
+.menu li:hover{
+    border: 1px solid #666; /* 邊框模式 */
+    background-color: rgba(255, 255, 255, 0.6); /* RGB Alpha */
+}
+.menu a{
+    color:darkslategrey; /* change org color */
+    text-decoration: none; /* cancel org underline */
+}
+
+/* main主要內容區 */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .6);
+    background-blend-mode: multiply; /* image/GettyImages_1265468202.7.jpg */
+    background-image: url(../images/GettyImages_1265468202.7.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.title{
+    font-family: Palatino, URW Palladio L, serif;
+    font-size: 2rem;
+    border-top: rgb(73, 15, 15) 6px solid;
+    padding: 12px 7px;
+    margin: 30px 0;
+}
+.box_list{
+    display: flex; /* 水平排列 */
+    width: 80%;
+}
+.box_list article{
+    flex: 1; /* 平均子元素的寬度 */
+    height: 65vh;
+    margin: 0 15px;
+    box-shadow: 2px 2px 10px #add;
+    border-radius: 25px;
+    overflow: hidden;
+}
+/* BANNER區 */
+#banner{
+ display: flex;/* 水平排列 */
+ justify-content: space-between;/* 水平貼齊左右 */
+ height: 100vh;
+ background-image: url(../images/GettyImages_1265468202.7.jpg);/* 背景圖 */
+ background-size: cover;
+ background-attachment: fixed;
+ filter: opacity(30%);
+}
+#banner header{
+    align-self: center;/* 副軸(垂直)置中對齊 */
+    padding-left: 20%;
+}
+#banner figure img{
+    position:absolute;
+    z-index: -1;
+    object-fit: cover;
+    max-height: 95vh;
+    width: auto;
+    filter: opacity(30%);
+}
+#banner h1{
+    position: center;
+}
+
+#banner figure{
+    width: 45%;/* 裝圖片的容器尺寸 */
+    align-self: flex-end; /* 副軸(垂直)靠下對齊 */
+    overflow: hidden;
+}
+
+
+/* service區 */
+#news article,.box_list>div{
+    flex: 1;/* 自動伸展子元素的寬度比例，各一份 */
+    height: 75vh;
+    margin: 0 15px;
+    box-shadow: 1px 1px 10px #ddd;
+    border-radius: 25px;
+    overflow: hidden;
+}
+#news figure{
+    height: 60%;
+    overflow: hidden; /* 不可以省略 */
+}
+#news figure img{
+    /* width:100%; 寬高都要100% 寬100% 前面已寫過 */
+    height: 100%;
+    object-fit: cover;
+}
+#news h2{
+    
+    font-size: 2rem; /* 如果爸爸沒有設定em 跟rem 就不會改變 */
+    padding-left: 5px 25px;
+}
+#news p{
+    padding-left: 5px 25px;
+        /* 多行省略 */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 6;
+}
+#news a{
+    color:#666;
+    text-decoration: none;
+     /* text-align:justify;齊行 */
+}
+/* SERVICE sec */
+.box_list>div{
+    position:relative; /* 正常排版就用relative */
+    background-size: cover;
+    background-position: center;
+}
+.item1{
+    background-image: url(../images/banner_beer.png);
+    background-size: cover; /* 預設會自動拼貼 */
+}
+.item2{
+    background-image: url(../images/banner_winec.png);
+    background-size: cover; /* 預設會自動拼貼 */
+    background-position: center;
+}
+.item3{
+    background-image: url(../images/banner_spirits.png);
+    background-size: cover; /* 預設會自動拼貼 */
+    background-position: center;
+}
+.item4{
+    background-image: url(../images/banner_cocktail1.png);
+    background-size: cover; /* 預設會自動拼貼 */
+    background-position: center;
+}
+.item1:hover{
+    background-image: url(../images/banner_Beer_hover.png);
+    background-size: cover; /* 預設會自動拼貼 */
+}
+.item2:hover{
+    background-image: url(../images/banner_wine_hover.png);
+    background-size: cover; /* 預設會自動拼貼 */
+    background-position: center;
+}
+.item3:hover{
+    background-image: url(../images/banner_spirits_Hover.png);
+    background-size: cover; /* 預設會自動拼貼 */
+    background-position: center;
+}
+.item4:hover{
+    background-image: url(../images/banner_cocktail1_hover.png);
+    background-size: cover; /* 預設會自動拼貼 */
+    background-position: center;
+}
+.text{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center; 
+    width: 240px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    align-items: center;
+    background-color: rgba(0,0,0,0.4);
+}
+.text h2{
+    color: rgb(255, 255, 255);
+    
+    font-size: 2rem;
+    padding-left: 5px 25px;
+}
+.text p{
+    padding: 5px 25px;
+}
+.text a{
+    color: #fff;
+    text-decoration: none;
+    /* text-align:juestify; 齊行 */
+    /* 單行省略 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* 不換行 */
+}
+.text a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* warning */
+.warning{
+    background-color: #110100;
+    position: fixed;
+    left: 10;
+    bottom: 0;
+}
+footer {
+    position: relative;
+    height: 170px;
+    width: 100%;
+    background-color: #45040454;
+}
+.policy h1{
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    line-height: 20px;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+
+
+
+
