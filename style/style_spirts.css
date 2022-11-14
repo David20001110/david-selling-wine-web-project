@@ -349,33 +349,32 @@ section{
 .item1{
     background-image: url(../images/spirts/Tanqueray\ Gin.jpg);
     /* background-size: cover; */
-    background-size:52px 210px;
-    
+    background-size:5rem;
 }
 .item2{
     background-image: url(../images/spirts/Chivas\ Regal\ 12YO\ Scotch\ Whisky.jpg);
     /* background-size: cover; */
-    background-size:52px 210px;
+    background-size:4.3rem;
 }
 .item3{
     background-image: url(../images/spirts/Finlandia\ Vodka.jpg);
     /* background-size: cover; */
-    background-size:52px 210px;
+    background-size:3.5rem;
 }
 .item4{
     background-image: url(../images/spirts/Jack\ Daniels\ Tennessee\ Whiskey\ 1\ Litre.jpg);
     /* background-size: cover; */
-    background-size:52px 210px;
+    background-size:4.8rem;
 }
 .item5{
     background-image: url(../images/spirts/Johnnie\ Walker\ Red\ Label\ 1\ Litre\ Scotch\ Whisky.jpg);
     /* background-size: cover; */
-    background-size:52px 210px;
+    background-size:4rem;
 }
 .item6{
     background-image: url(../images/spirts/Smirnoff\ Red\ Vodka.jpg);
     /* background-size: cover; */
-    background-size: 52px 210px;
+    background-size:4rem;
 }
 
 .policy{
@@ -402,33 +401,34 @@ section{
 max-height: 22pt;
 /* padding: 0 35%; */
 }
- .toTop{
-		display: block;
-		width: 50px;
-		height: 50px;
-		background-color: #920d0d;
-		color: white;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: fixed;
-		right: 40px;
-		bottom: 40px;
-		text-decoration: none;
-		letter-spacing: 0;
-		border-radius: 50%;
-		font-size: 1.5em;
-		transition: .3s;
+.toTop{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #cc1c1c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    text-decoration: none;
+    letter-spacing: 0;
+    border-radius: 50%;
+    font-size: 1.5em;
+    transition: .3s;
 }
 
 .toTop .fa{
-	transition: .3s;
+transition: .3s;
 }
 
 .toTop:hover{
-	background-color: rgb(255, 0, 0);
+background-color: rgb(139, 10, 10);
+color: #fff;
 }
 
 .toTop:hover .fa{
-	transform: translateY(-5px);
+transform: translateY(-5px);
 }

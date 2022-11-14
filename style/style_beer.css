@@ -350,33 +350,32 @@ section{
 .item1{
     background-image: url(../images/beer/Generic_Bundle.jpg);
     /* background-size: cover; */
-    background-size:52px 210px;
+    background-size:3.6rem;
     
 }
 .item2{
     background-image: url(../images/beer/Henninger\ Lager\ Bottle.jpg);
     /* background-size: cover; */
-    background-size:52px 210px;
+    background-size:3.8rem;
 }
 .item3{
     background-image: url(../images/beer/Hofbrau\ Dunkel\ Bottle.jpg);
     /* background-size: cover; */
-    background-size:52px 210px;
+    background-size:3.6rem;
 }
 .item4{
-    background-image: url(../images/beer/Matso\'s\ Ginger\ Beer\ Bottle.jpg);
-    /* background-size: cover; */
-    background-size:52px 210px;
+    background-image: url(../images/beer/Matso\ Ginger\ Beer\ Bottle.jpg);
+    background-size:3.5rem;
 }
 .item5{
     background-image: url(../images/beer/Rekorderlig\ Strawberry\ &\ Lime\ Cider\ Bottle.jpg);
     /* background-size: cover; */
-    background-size:52px 210px;
+    background-size:3.6rem;
 }
 .item6{
     background-image: url(../images/beer/Tooheys\ Extra\ Dry\ Bottle.jpg);
     /* background-size: cover; */
-    background-size: 52px 210px;
+    background-size:3.8rem;
 }
 
 .policy{
@@ -407,7 +406,7 @@ max-height: 22pt;
 		display: block;
 		width: 50px;
 		height: 50px;
-		background-color: #920d0d;
+		background-color: #cc1c1c;
 		color: white;
 		display: flex;
 		justify-content: center;
@@ -427,7 +426,8 @@ max-height: 22pt;
 }
 
 .toTop:hover{
-	background-color: rgb(255, 0, 0);
+	background-color: rgb(139, 10, 10);
+    color: #fff;
 }
 
 .toTop:hover .fa{

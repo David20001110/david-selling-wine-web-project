@@ -1,0 +1,70 @@
+@charset "UTF-8"; /* 國際萬用編碼，一定要放第一行 */
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, Ubuntu,"Helvetica Neue", Helvetica, Arial,
+    "PingFang TC", "Noto Sans TC", "⿊體-繁", "Heiti TC", "微軟正⿊體","Microsoft JhengHei",sans-serif;
+    background-color: rgb(43, 27, 5);
+    margin: 0 0;
+}
+img{
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    cursor: pointer;
+}
+
+.contact-bn{
+    background-image: url(../images/contact/daniel-vogel-PUDQGDlM_V8-unsplash.jpg);
+}
+.banner{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.banner img{
+    width: 100%;
+    z-index: -1;
+}
+.banner figure img{
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    cursor: pointer;
+}
+.banner h1,h3{
+    align-self: center;
+    margin: 0 auto;
+    color: aliceblue;
+}
+.banner h1{
+    margin-bottom: 7px;
+    font-weight: 900;
+    font-size: 2.5rem;
+}
+/* content */
+.content{
+    display: flex;
+    flex-direction: column; /* 主籌垂直 */
+    align-items: center; /* 副軸水平 */
+}
+.content h1{
+    align-self: center;
+    color: aliceblue;
+}
+#form{
+    width: 25%;
+}
+#form *{
+    width: 100%;
+}
+#form label{
+    display: block;
+    color: aliceblue;
+
+}

@@ -1,11 +1,19 @@
 @charset "UTF-8"; /* 國際萬用編碼，一定要放第一行 */
-@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&family=Edu+VIC+WA+NT+Beginner&family=Merriweather:wght@300&family=Edu+VIC+WA+NT+Beginner&display=swap');
+@font-face{
+    font-family: PinkyPromise;
+    src: url(webfonts/PinkyPromise.otf);
+}
 *{
     margin: 0;
     padding: 0;
+    font: inherit; /* 清除字體所有預設值 */
+    box-sizing: border-box; /* (RWD必加)不累加border & padding */
 }
 body {
     background-color: rgb(26, 0, 0);
+    font-family: -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, Ubuntu,"Helvetica Neue", Helvetica, Arial,
+    "PingFang TC", "Noto Sans TC", "⿊體-繁", "Heiti TC", "微軟正⿊體","Microsoft JhengHei",sans-serif;
     color: rgb(255, 255, 255);
 }
 img{
@@ -15,6 +23,115 @@ img{
     width: 26%;/* 寬度去符合裝圖片的容器尺寸 */
 }
 
+/* age gate */
+#age-verify {
+    position: fixed;
+    z-index: 997;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  #age-text{
+    margin-top: 10px;
+  }
+  #age-verify .window {
+    position: absolute;
+    z-index: 998;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 320px;
+    overflow: hidden;
+    padding: 40px 40px 20px;
+    margin-left: -200px;
+    margin-top: -125px;
+    background-image: url(../images/formbg.jpg);
+    box-sizing: border-box;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  }
+  #age-verify img{
+      width: 300px;
+      margin: 0 auto;
+  }
+  #age-verify .window span {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+    color: #110100;
+  }
+  #age-verify .window span.age_title {
+    color: rgb(21, 12, 12);
+    font-size: 20px;
+  }
+  #age-verify .window button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 20%;
+    height: 30px;
+    color: rgb(20, 17, 17);
+    font-size: 18px;
+    border: 1px solid rgb(16, 13, 13);
+    background-color: rgb(242, 235, 235);
+    margin-top: 20px;
+    font-family: "Open Sans", sans-serif;
+    transform: scale(1);
+    border-radius: 5px;
+  }
+  #age-verify .window button.back {
+    display: block;
+    float: none;
+    margin: auto;
+    background-color: #fff;
+    color: Red !important;
+    margin-top: 20px;
+  }
+  #age-verify .window button.yes {
+    float: left;
+    margin-left: 20%;
+  }
+  #age-verify .window button.no {
+    float: right;
+    margin-right: 20%;
+    margin-bottom: 10px;
+  }
+  #age-verify .window button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    background-color: #857c7c;
+  }
+  #age-verify .window .underBox {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+    padding: 40px;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: Red;
+    transition: 500ms;
+    box-sizing: border-box;
+  }
+  #age-verify .window .underBox * {
+    color: #FFF !important;
+  }
+  #age-verify.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  #age-verify.hidden .window {
+    transform: scale(0.5);
+  }
+  #age-verify.under .window .underBox {
+    top: 0%;
+  }
+  .hiddenText {
+    display: none;
+  }
 
 /* topbar (header) */
 #topbar {
@@ -96,7 +213,7 @@ section {
     align-items: center;
     height: 100vh;
     background-color: rgba(0, 0, 0, .6);
-    background-blend-mode: multiply; /* image/GettyImages_1265468202.7.jpg */
+    background-blend-mode: multiply;
     background-image: url(../images/GettyImages_1265468202.7.jpg);
     background-size: cover;
     background-position: center center;
@@ -125,7 +242,7 @@ section {
  display: flex;/* 水平排列 */
  justify-content: space-between;/* 水平貼齊左右 */
  height: 100vh;
- background-image: url(../images/GettyImages_1265468202.7.jpg);/* 背景圖 */
+ background-image: url(../images/GettyImages_1265468202.7.jpg);
  background-size: cover;
  background-attachment: fixed;
  filter: opacity(30%);
@@ -197,40 +314,40 @@ section {
     background-position: center;
 }
 .item1{
-    background-image: url(../images/banner_beer.png);
+    background-image: url(../images/index/beer.png);
     background-size: cover; /* 預設會自動拼貼 */
 }
 .item2{
-    background-image: url(../images/banner_winec.png);
+    background-image: url(../images/index/wine.png);
     background-size: cover; /* 預設會自動拼貼 */
     background-position: center;
 }
 .item3{
-    background-image: url(../images/banner_spirits.png);
+    background-image: url(../images/index/spirits.png);
     background-size: cover; /* 預設會自動拼貼 */
     background-position: center;
 }
 .item4{
-    background-image: url(../images/banner_cocktail1.png);
+    background-image: url(../images/index/cocktails.png);
     background-size: cover; /* 預設會自動拼貼 */
     background-position: center;
 }
 .item1:hover{
-    background-image: url(../images/banner_Beer_hover.png);
+    background-image: url(../images/index/beer_hover.png);
     background-size: cover; /* 預設會自動拼貼 */
 }
 .item2:hover{
-    background-image: url(../images/banner_wine_hover.png);
+    background-image: url(../images/index/wine_hover.png);
     background-size: cover; /* 預設會自動拼貼 */
     background-position: center;
 }
 .item3:hover{
-    background-image: url(../images/banner_spirits_Hover.png);
+    background-image: url(../images/index/spirits_hover.png);
     background-size: cover; /* 預設會自動拼貼 */
     background-position: center;
 }
 .item4:hover{
-    background-image: url(../images/banner_cocktail1_hover.png);
+    background-image: url(../images/index/cocktails_hover.png);
     background-size: cover; /* 預設會自動拼貼 */
     background-position: center;
 }
@@ -271,12 +388,19 @@ section {
     text-decoration: none;
 }
 
+
 /* warning */
 .warning{
     background-color: #110100;
     position: fixed;
     left: 10;
     bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+.warningimg{
+max-height: 22pt;
+/* padding: 0 35%; */
 }
 footer {
     position: relative;
@@ -295,5 +419,23 @@ footer {
 
 
 
+/*---------- 螢幕小於 600 時 ----------*/
+@media screen and (max-width: 820px){
+    .box_list{
+       flex-direction: column;
+    }
+    .box_list>div{
+        flex:none;
+        height: 15vh;
+        margin: 18px;
+    }
+    footer{
+        margin: 10px;
+        bottom: 10px;
+    }
+    .policy h1{
+        /* line-height: 16px; */
+        font-size: 0.1 rem;
+    }
 
-
+}

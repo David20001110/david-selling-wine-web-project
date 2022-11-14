@@ -349,33 +349,32 @@ section{
 .item1{
     background-image: url(../images/wine/Evans\ _\ Tate\ E_T\ Sauvignon\ Blanc.jpg);
     /* background-size: cover; */
-    background-size:52px 210px;
-    
+    background-size: 3.8em;
 }
 .item2{
     background-image: url(../images/wine/Robert\ Mondavi\ Bourbon\ Barrels\ Chardonnay.jpg);
     /* background-size: cover; */
-    background-size:52px 210px;
+    background-size: 3.8em;
 }
 .item3{
     background-image: url(../images/wine/Rapaura\ Springs\ Marlborough\ Sauvignon\ Blanc.jpg);
     /* background-size: cover; */
-    background-size:52px 210px;
+    background-size: 3.8em;
 }
 .item4{
     background-image: url(../images/wine/Fat\ Bastard\ Chardonnay.jpg);
     /* background-size: cover; */
-    background-size:52px 210px;
+    background-size: 3.8em;
 }
 .item5{
     background-image: url(../images/wine/Rapaura\ Springs\ Marlborough\ Sauvignon\ Blanc.jpg);
     /* background-size: cover; */
-    background-size:52px 210px;
+    background-size: 3.8em;
 }
 .item6{
     background-image: url(../images/wine/Atriu\ Marlborough\ Sauvignon\ Blanc.jpg);
     /* background-size: cover; */
-    background-size: 52px 210px;
+    background-size: 3.8em;
 }
 
 .policy{
@@ -402,33 +401,34 @@ section{
 max-height: 22pt;
 /* padding: 0 35%; */
 }
- .toTop{
-		display: block;
-		width: 50px;
-		height: 50px;
-		background-color: #920d0d;
-		color: white;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: fixed;
-		right: 40px;
-		bottom: 40px;
-		text-decoration: none;
-		letter-spacing: 0;
-		border-radius: 50%;
-		font-size: 1.5em;
-		transition: .3s;
+.toTop{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #cc1c1c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    text-decoration: none;
+    letter-spacing: 0;
+    border-radius: 50%;
+    font-size: 1.5em;
+    transition: .3s;
 }
 
 .toTop .fa{
-	transition: .3s;
+transition: .3s;
 }
 
 .toTop:hover{
-	background-color: rgb(255, 0, 0);
+background-color: rgb(139, 10, 10);
+color: #fff;
 }
 
 .toTop:hover .fa{
-	transform: translateY(-5px);
+transform: translateY(-5px);
 }

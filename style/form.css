@@ -1,0 +1,43 @@
+@charset "UTF-8"; /* 國際萬用編碼，一定要放第一行 */
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Helvetica, Arial , "PingFang TC", "Noto Sans TC", "黑體-繁", "Heiti TC", "微軟正黑體", "Microsoft JhengHei", sans-serif;
+    background-color: rgb(6, 6, 6);
+    color: aliceblue;
+    
+}
+.top{
+    display: flex;
+    align-items: center;
+}
+.top a img{
+    max-height: 80px;
+}
+
+section{
+    display: flex;
+    flex-direction: column; /* 主籌垂直 */
+    align-items: center; /* 副軸水平 */
+}
+#form1{
+    width: 25%;
+} 
+#account,#password,#name,#idnumber,#tel,#birthday,#sex,#message {
+    display: block;
+    margin: 5px 0 30px;
+    width: 100%;
+}
+.item_style{
+    border: #7c4f0c 1px solid; /* 邊框的顏色和距離，solid代表線的樣式要實線 */
+    padding: 7px;
+    border-radius: 10px; /* 邊框的圓弧度 */
+}
+.button{
+    display: flex;
+    justify-content: space-around;
+}
+.button input{
+    border: #7c4f0c 1px solid; /* 邊框的顏色和距離，solid代表線的樣式要實線 */
+    padding: 7px;
+    border-radius: 10px; /* 邊框的圓弧度 */
+    cursor: pointer;/* 游標樣式變成手 */
+}
