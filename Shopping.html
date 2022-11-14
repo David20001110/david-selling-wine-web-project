@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/DJMLogowb.png">
+  <link rel="stylesheet" href="style/Shopping.css">
+  <title>DJM Bottle Shop</title>
+</head>
+
+<body>
+  <header id="topbar">
+    <!-- logo -->
+    <h1><img src="images/shopping/DJM Logo-sg.png" alt="DJM商標" onclick="location.href='homepageindex.html'"></h1>
+    <!-- 選單區 -->
+    <nav>
+      <ul class="icon">
+        <li class="icon_VIP"><a href="" target="_blank"></a></li>
+        <li class="icon_service"><a href="" target="_blank"></a></li>
+        <li class="icon_location"><a href="" target="_blank"></a></li>
+        <li class="icon_shopping"><a href="" target="_blank"></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="Shopping cart" class="cart">
+      <h2 class="title">Shopping Cart</h2>
+    </section>
+  </main>
+  <section>
+    <div class="Header">
+      <h3 class="Heading">Purchase</h3>
+      <input type="button" onclick="location.href='homepage.html'" value="Continue Shopping" class="Action">
+    </div>
+  </section>
+  <section>
+    <div class="description">
+      <h6 class="totalprice">Total</h6>
+    </div>
+  </section>
+  <div class="product">
+    <div class="product-image">
+      <img src="images/shopping/ChoWhi.png">
+    </div>
+    <div class="product-details">
+      <div class="product-title">淘氣鬼巧克力威士忌</div>
+      <p class="product-description">
+        全程皆在精選的、擁有濃郁巧克力甜美氣息的雪莉桶中熟成，能嗅聞到溫暖的熱巧克力、現磨可可刨屑氣息，入口瞬間如同頂級巧克力融化在舌面般，感受到絲綢般順滑的酒體，且帶豐富多層次的黑糖、蜜燉水果和辛香料香甜味道。</p>
+    </div>
+    <div class="product-price">1800</div>
+    <div class="product-quantity">
+      <input type="number" value="2" min="1">
+    </div>
+    <div class="product-removal">
+      <button class="remove-product">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price">3600</div>
+  </div>
+
+  <div class="product">
+    <div class="product-image">
+      <img src="images/shopping/RW.png">
+    </div>
+    <div class="product-details">
+      <div class="product-title">納帕最具Grand Cru 特級園紅酒</div>
+      <p class="product-description">
+        歷經25年計畫，在過往配合過的80個葡萄園中精選五座最優質葡萄園、採自坡地的嚴選果實、以卡本內蘇維翁為主幹，呈現波爾多左岸風格，有別以往跨區混釀模式，採用類單一園概念來生產特級佳釀，納帕最好風土的極致表現。</p>
+    </div>
+    <div class="product-price">499</div>
+    <div class="product-quantity">
+      <input type="number" value="1" min="1">
+    </div>  
+    <div class="product-removal">
+      <button class="remove-product">
+        Remove
+      </button>
+    </div>
+    <div class="product-line-price">499</div>
+  </div>
+
+  <div class="totals">
+    <div class="totals-item">
+      <label>Subtotal</label>
+      <div class="totals-value" id="cart-subtotal">1800</div>
+    </div>
+    <div class="totals-item">
+      <label>Tax (5%)</label>
+      <div class="totals-value" id="cart-tax">30</div>
+    </div>
+    <div class="totals-item">
+      <label>Shipping</label>
+      <div class="totals-value" id="cart-shipping">15</div>
+    </div>
+    <div class="totals-item totals-item-total">
+      <label>Grand Total</label>
+      <div class="totals-value" id="cart-total">1800</div>
+    </div>
+  </div>
+
+  <button class="checkout">Checkout</button>
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+  <script src="script/Shopping.js"></script>
+  <footer>
+    <div class="warning">
+      <p><img src="images/shopping/Warning1.png"></p>
+    </div>
+  </footer>
+</body>
+
+</html>
