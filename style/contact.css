@@ -13,58 +13,170 @@ img{
     cursor: pointer;
 }
 
-.contact-bn{
-    background-image: url(../images/contact/daniel-vogel-PUDQGDlM_V8-unsplash.jpg);
+.banner::before{
+    content: "";
+    background-image: url(../images/contact/contact_bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.6;
 }
+
 .banner{
+    position: relative;
     height: 100vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    
+    
 }
-.banner img{
-    width: 100%;
-    z-index: -1;
+.banner div img{
+    width: 15%;
+    position: relative;
 }
-.banner figure img{
-    display: block;
-    margin: 0 auto;
-    width: 20%;
-    cursor: pointer;
-}
+
 .banner h1,h3{
     align-self: center;
     margin: 0 auto;
     color: aliceblue;
+    position: relative;
 }
 .banner h1{
+    font-family: 'Coda Caption', sans-serif;
     margin-bottom: 7px;
     font-weight: 900;
-    font-size: 2.5rem;
+    font-size: 4rem;
+    text-shadow: 3px 3px 2px rgba(0,0,0,.8);
 }
+.banner h3{
+    font-size: 2rem;
+    text-shadow: 3px 3px 2px rgba(0,0,0,.8);
+}
+
+#topbar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  nav {
+    display: flex;
+    flex-direction: row; /* 主軸垂直排列 */
+    align-items: flex-start; /* 副軸垂直排列 */
+  }
+  nav ul{
+    list-style: none; /* 把ul預設的點點拿掉 */
+  }
+  .icon{
+    display: flex; /* 讓子元素水平排列 */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .icon li{
+    display: block; /* 改變為區塊才能設定寬高 */
+    width: 35px;
+    height: 35px;
+    margin: 0 15px; /* 上下 左右 */
+  }
+  .icon_VIP{
+    background-image: url(../images/icon/VIPicon.png); /* svg圖檔會自動與區塊同寬 */
+    background-size: 100%; /* 非svg圖檔則須設定100% */
+    cursor: pointer;
+  }
+  .icon_service{
+    background-image: url(../images/icon/service-icon.png);
+    background-size: 100%;
+    cursor: pointer;
+  }
+  .icon_location{
+    background-image: url(../images/icon/location-icon.png);
+    background-size: 100%;
+    cursor: pointer;
+  }
+  .icon_shopping{
+    background-image: url(../images/icon/shopping-icon.png);
+    background-size: 100%;
+    cursor: pointer;
+  }
+  .icon_VIP:hover{
+    background-image: url(../images/icon/VIPicon-hover.png);
+    background-size: 100%;
+  }
+  .icon_service:hover{
+    background-image: url(../images/icon/service-icon-hover.png);
+    background-size: 100%;
+  }
+  .icon_location:hover{
+    background-image: url(../images/icon/location-icon-hover.png);
+    background-size: 100%;
+  }
+  .icon_shopping:hover{
+    background-image: url(../images/icon/shopping-icon-hover.png);
+    background-size: 100%;
+  }
 /* content */
 .content{
     display: flex;
     flex-direction: column; /* 主籌垂直 */
     align-items: center; /* 副軸水平 */
 }
-.content h1{
+.content h3{
+    margin-top: 70px;
+    font-size: 30px;
+}
+.content h3,h4{
     align-self: center;
     color: aliceblue;
 }
 #form{
     width: 25%;
+    margin-bottom: 40px;
 }
-#form *{
+#form input,textarea{
     width: 100%;
+    box-sizing: border-box;
+}
+#form input{
+    height: 40px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px 15px;
+}
+#form textarea{
+    margin-bottom: 30px;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 5px 15px;
 }
 #form label{
     display: block;
     color: aliceblue;
-
+    font-size: 1.2rem;
+}
+#form #submit {
+    background-color:wheat;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-weight: bolder;
+    height: 50px;
+    font-size: 20px;
+    color: rgb(110, 29, 29);
+    cursor: pointer;
+}
+#form #submit:hover {
+  color:wheat;
+  background-color: rgb(139, 56, 56);
+}
+.warning{
+    background-color: #110100;
+    position: fixed;
+    left: 10;
+    bottom: 0;
 }
