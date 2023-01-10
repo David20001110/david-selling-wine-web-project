@@ -1,0 +1,67 @@
+<section>
+    <!-- <div class="top">
+      <a href="homepage.html">
+        <img src="images/logo/DJM Logo.png" alt="" class="topimage">
+      </a>
+      <div>
+        <h2>VIP會員資料</h2>
+      </div>
+    </div> -->
+    <form id="form1" name="form1" method="post">
+      <p>
+        <label for="account">*帳號:</label>
+        <input name="account" class="item_style" type="text" id="account" placeholder="gmail信箱" required="required">
+        <!-- disabled="disabled"代表禁用 -->
+      </p>
+      <p>
+        <label for="password">*密碼:</label>
+        <input name="password" class="item_style" type="password" id="password" placeholder="第一個字母大寫"
+          required="required">
+      </p>
+      <p>
+        <label for="name">*姓名:</label>
+        <input type="text" class="item_style" name="name" id="name" autofocus="autofocus" required="required"
+          autocomplete="on" title="請輸入姓名" size="12">
+      </p>
+      <p>
+        <label for="idnauber">*身份証字號:</label>
+        <input name="idnauber" class="item_style" type="text" id="idnumber" size="16" maxlength="10"
+          required="required">
+      </p>
+      <p>
+        <label for="tel">*聯絡電話:</label>
+        <input type="tel" class="item_style" name="tel" id="tel" required="required">
+      </p>
+      <p>
+        <label for="birthday">*生日:</label>
+        <input type="birthday" class="item_style" name="date" id="birthday" placeholder="ex.19990201"
+          equired="required">
+      </p>
+      <p>
+        <label for="sex">*性別:</label>
+        <select name="select" class="item_style" id="sex" required="required">
+          <option>請選擇</option>
+          <option value="男">生理男</option>
+          <option value="女">生理女</option>
+        </select>
+      </p>
+      <p>
+      <fieldset style="border: none; margin: 0; padding: 0;">
+        <legend>*會員類型:</legend>
+        <input type="radio" name="member" id="member_0" value="一般會員">
+        <label for="member_0">一般會員</label>
+
+        <input type="radio" name="member" id="member_1" value="終身會員" checked="checked">
+        <label for="member_1">終身會員</label>
+      </fieldset>
+      </p>
+      <p>
+        <label for="message">留言:</label>
+        <textarea name="message" class="item_style" rows="7" id="message"></textarea>
+      </p>
+      <p class="button">
+        <input type="reset" name="reset" id="reset" value="重設">
+        <input type="submit" name="submit" id="submit" value="送出">
+      </p>
+    </form>
+  </section>

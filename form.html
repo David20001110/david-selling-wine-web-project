@@ -3,34 +3,57 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VIP表單</title>
   <link rel="stylesheet" href="style/form.css">
 </head>
 
 <body>
+  <div class="banner contact-bn">
+    <div><img src="images/logo/DJM Logo.png" alt="DJM商標" onclick="location.href='homepage.html'"></div>
+    <h1>CONTACT US</h1>
+    <h3>聯絡我們</h3>
+    <header id="topbar">
+      <!-- 選單區 -->
+      <nav>
+        <ul class="icon">
+          <a href="form.html">
+            <li class="icon_VIP"></li>
+          </a>
+          <a href="contact.html">
+            <li class="icon_service"></li>
+          </a>
+          <a href="location.html">
+            <li class="icon_location"></li>
+          </a>
+          <a href="Shopping.html"><!-- target="_blank" 是使a連結另分頁 -->
+            <li class="icon_shopping"></li>
+          </a>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
   <section>
+
     <div class="top">
-      <a href="homepage.html">
-        <img src="images/logo/DJM Logo.png" alt="" class="topimage">
-      </a>
       <div>
         <h2>VIP會員資料</h2>
       </div>
     </div>
+
     <form id="form1" name="form1" method="post">
       <p>
         <label for="account">*帳號:</label>
         <input name="account" class="item_style" type="text" id="account" placeholder="gmail信箱" required="required">
-        <!-- disabled="disabled"代表禁用 -->
       </p>
       <p>
         <label for="password">*密碼:</label>
-        <input name="password" class="item_style" type="password" id="password" placeholder="第一個字母大寫" required="required">
+          <input name="password" class="item_style" type="password" id="password" placeholder="第一個字母大寫" required="required">
       </p>
       <p>
         <label for="name">*姓名:</label>
-        <input type="text" class="item_style" name="name" id="name" autofocus="autofocus" required="required" autocomplete="on" title="請輸入姓名"
-          size="12">
+        <input type="text" class="item_style" name="name" required="required" id="name" placeholder="王大明" title="姓名欄位" size="15">
       </p>
       <p>
         <label for="idnauber">*身份証字號:</label>
@@ -42,7 +65,8 @@
       </p>
       <p>
         <label for="birthday">*生日:</label>
-        <input type="birthday" class="item_style" name="date" id="birthday"   placeholder="ex.19990201"equired="required" >
+        <input type="birthday" class="item_style" name="date" id="birthday" placeholder="ex.19990201"
+          equired="required">
       </p>
       <p>
         <label for="sex">*性別:</label>
@@ -53,25 +77,27 @@
         </select>
       </p>
       <p>
-      <fieldset style="border: none; margin: 0; padding: 0;">
-        <legend>*會員類型:</legend>
-        <input type="radio" name="member" id="member_0" value="一般會員">
-        <label for="member_0">一般會員</label>
+        <fieldset style="border: none; margin: 0; padding: 0;">
+          <legend>*會員類型:</legend>
+          <input type="radio" name="member" id="member_0" value="一般會員">
+          <label for="member_0">一般會員</label>
   
-        <input type="radio" name="member" id="member_1" value="終身會員" checked="checked">
-        <label for="member_1">終身會員</label>
-      </fieldset>
-      </p>
-      <p>
-        <label for="message">留言:</label>
-        <textarea name="message" class="item_style" rows="7" id="message"></textarea>
+          <input type="radio" name="member" id="member_1" value="終身會員" checked="checked">
+          <label for="member_1">終身會員</label>
+        </fieldset>
       </p>
       <p class="button">
-        <input type="reset" name="reset" id="reset" value="重設資料">
-        <input type="submit" name="submit" id="submit" value="送出資料">
+        <input type="reset" name="reset" id="reset" value="重設">
+        <input type="submit" name="submit" id="submit" value="送出">
       </p>
     </form>
   </section>
+  <footer>
+    <div class="warning">
+      <p><img src="images/shopping/Warning1.png"></p>
+    </div>
+  </footer>
+
 </body>
 
 </html>
